@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { useRouter } from "next/navigation";
+import PWAInstallButton from "./InstallButton";
+import InstallPrompt from "./InstallButton";
 
 export default function Navbar() {
   const router = useRouter();
@@ -46,11 +48,7 @@ export default function Navbar() {
                 </Link>
               </div>
             </div>
-            <Button
-              className='text-sm  hover:opacity-90 ml-2'
-              onClick={handleRedirect}>
-              Get Started
-            </Button>
+            <InstallPrompt />
           </div>
         </div>
       </div>
