@@ -2,7 +2,7 @@
 export default function Head() {
   return (
     <>
-      <meta name='application-name' content='PWA App' />
+      <meta name='C-neima' content='PWA App' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
       <meta name='apple-mobile-web-app-title' content='PWA App' />
@@ -56,7 +56,7 @@ export default function Head() {
       />
 
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:url' content='https://yourdomain.com' />
+      <meta name='twitter:url' content='https://c-neima.vercel.app/' />
       <meta name='twitter:title' content='PWA App' />
       <meta name='twitter:description' content='Best PWA App in the world' />
       <meta
@@ -68,7 +68,7 @@ export default function Head() {
       <meta property='og:title' content='PWA App' />
       <meta property='og:description' content='Best PWA App in the world' />
       <meta property='og:site_name' content='PWA App' />
-      <meta property='og:url' content='https://yourdomain.com' />
+      <meta property='og:url' content='https://c-neima.vercel.app/' />
       <meta
         property='og:image'
         content='https://yourdomain.com/icons/apple-touch-icon.png'
