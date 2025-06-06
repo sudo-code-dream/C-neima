@@ -17,7 +17,7 @@ const WatchPage = ({ params }: WatchPageProps) => {
 
   return (
     <iframe
-      src={`https://vidsrc.to/embed/movie/${id}`}
+      src={`https://vidsrc.xyz/embed/movie/${id}`}
       width='100%'
       height='500'
       frameBorder='0'
