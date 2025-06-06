@@ -1,12 +1,8 @@
+import { useParams } from "next/navigation";
 import React from "react";
 
-interface WatchPageProps {
-  params: {
-    id: any;
-  };
-}
-
-const WatchPage = ({ params }: WatchPageProps) => {
+const WatchPage = () => {
+  const params = useParams();
   const { id } = params;
 
   if (!id) {
