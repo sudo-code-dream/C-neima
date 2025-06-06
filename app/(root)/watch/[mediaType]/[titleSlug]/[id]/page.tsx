@@ -2,9 +2,7 @@ import React from "react";
 
 interface WatchPageProps {
   params: {
-    id: string;
-    mediaType: string;
-    titleSlug: string;
+    id: any;
   };
 }
 
