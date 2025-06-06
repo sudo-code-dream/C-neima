@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Card from "./Card";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+
 
 interface Data {
   id: number;

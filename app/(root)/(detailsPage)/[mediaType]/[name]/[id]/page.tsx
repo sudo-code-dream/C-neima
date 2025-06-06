@@ -11,6 +11,7 @@ import { BiPlayCircle } from "react-icons/bi";
 import { FaEye } from "react-icons/fa6";
 import { TiStar } from "react-icons/ti";
 import { useSelector } from "react-redux";
+import slugify from "slugify";
 
 type DetailsData = {
   backdrop_path?: string;
@@ -57,6 +58,9 @@ const DetailsPage = () => {
     }
   }, [imageURL]);
 
+  const mediaType = params?.mediaType;
+  const titleSlug = slugify(data?.title || data?.name || "", { lower: true });
+
   if (isLoading || !data || !castData) {
     return <LoaderUI />;
   }
@@ -84,7 +88,7 @@ const DetailsPage = () => {
             <h2 className='text-2xl lg:text-4xl font-bold text-white'>
               {data?.title || data?.name}
             </h2>
-            <Link href={"/" + params?.explore + "/" + params?.id + "/watch"}>
+            <Link href={`/watch-${mediaType}/${titleSlug}/${data.id}`}>
               <button className='flex items-center justify-center text-white text-xl bg-red-600 rounded-xl p-2 m-3 hover:scale-105 transition-all'>
                 <BiPlayCircle /> Play Now
               </button>

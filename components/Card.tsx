@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import moment from "moment";
 import { TiStar } from "react-icons/ti";
 import Link from "next/link";
-import { FaPlay } from "react-icons/fa6";
 import { CirclePlay } from "lucide-react";
+import slugify from "slugify";
 
 interface CardProps {
   data: any;
@@ -17,9 +17,11 @@ const Card = ({ data, trending, index, media_type }: CardProps) => {
   const imageURL = useSelector((state: any) => state.movieoData.imageURL);
   const mediaType = data.media_type ?? media_type;
 
+  const titleSlug = slugify(data.title || data.name, { lower: true });
+
   return (
     <Link
-      href={"/" + mediaType + "/" + data.id}
+      href={`/${mediaType}/${titleSlug}/${data.id}`}
       className='w-full min-w-[180px] max-w-[210px] block rounded h-80 overflow-hidden relative hover:scale-105 transition-all group'>
       {" "}
       {/* Added group class */}
