@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useParams } from "next/navigation";
 import React from "react";
 
@@ -12,7 +12,7 @@ const WatchPage = () => {
 
   return (
     <iframe
-      src={`https://vidsrc.xyz/embed/movie/${id}`}
+      src={`https://embed.su/embed/movie/${id}`}
       width='100%'
       height='500'
       frameBorder='0'

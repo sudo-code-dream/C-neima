@@ -1,4 +1,4 @@
-import { Play, Star } from "lucide-react";
+"use client";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Button } from "./ui/button";
@@ -28,9 +28,9 @@ const Card = ({ data, heading, media_type }: DataProps) => {
   const imageURL = useSelector((state: any) => state.movieoData.imageURL);
   const limitData = data.slice(0, 3); //limits to 4 items only
 
-  return limitData.map((item, index) => (
+  return limitData.map((item: any, index: number) => (
     <a
-      href={"/" + media_type + "/" + item.id}
+      href={`${media_type}/${item?.name || item?.title}/${item.id}`}
       key={item.id + index}
       className='flex gap-2 hover:bg-white/10 p-2 rounded-md transition-colors'>
       <img
